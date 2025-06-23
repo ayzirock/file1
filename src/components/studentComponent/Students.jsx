@@ -48,6 +48,8 @@ const Students = () => {
   const [forEditBtn, setForEditBtn] = useState(false);
   const [forEditIndex, setForEditIndex] = useState(null);
 
+  const [rotating, setRotating] = useState(false)
+
   const handleAddStudentButton = () => {
     setImagePreview(null);
     setName("");
@@ -75,11 +77,15 @@ const Students = () => {
    const scrollRef = useRef(null);
 
   const handlingReloadBtn = () => {
+    setRotating(true)
     setStudentDataList(studentDataList);
     setVisiableCounter(7);
     if (scrollRef.current) {
       scrollRef.current.scrollTop = 0;
     }
+    setTimeout(() => {
+    setRotating(false);
+  }, 200);
   };
 
   // const [studentDataList, setStudentDataList] = useState(dummyStudentData);
@@ -174,7 +180,7 @@ const Students = () => {
                 }}
               >
                 <div
-                  className="cursor-pointer text-[#FEAF00]"
+                  className={`cursor-pointer text-[#FEAF00] ${rotating ? "animate-spin":""}`}
                   onClick={handlingReloadBtn}
                 >
                   <LoopOutlined />
