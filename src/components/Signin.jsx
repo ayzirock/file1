@@ -90,7 +90,7 @@ function Signin() {
             </label>
             <input
               type="text"
-              className={`py-2 px-3 mt-1 w-full h-10 border rounded  ${
+              className={`py-2 px-3 mt-1 lowercase w-full h-10 border rounded  ${
                 emailError ? "border-red-500 text-red-500" : "border-[#e5e5e5]"
               }`}
               id={`email`}
