@@ -69,7 +69,7 @@ const StudentListData = ({
             />
           </div>
           <div className="capitalize">{name}</div>
-          <div className="lowercase">{email}</div>
+          <div className="lowercase max-w-34 truncate">{email}</div>
           <div>{phone}</div>
           <div>{enrollNum}</div>
           <div>{date}</div>

@@ -85,7 +85,7 @@ const Students = () => {
     }
     setTimeout(() => {
     setRotating(false);
-  }, 200);
+  }, 800);
   };
 
   // const [studentDataList, setStudentDataList] = useState(dummyStudentData);
@@ -126,7 +126,7 @@ const Students = () => {
   };
 
   return (
-    <div className="bg-[#F8F8F8] min-h-[calc(100vh-60px)]">
+    <div className="bg-[#F8F8F8] min-h-[calc(100vh-60px)] transition-all duration-700 ease-in-out">
       <div className=" p-5 sticky top-15">
         <div className="flex justify-between items-center">
           <div className="font-bold text-[22px]">
@@ -195,7 +195,7 @@ const Students = () => {
           </div>
       </div>
 
-      <div ref={scrollRef} className="px-5 overflow-y-auto h-[400px]">
+      <div ref={scrollRef} className="px-5 overflow-auto h-[400px]">
         {/* show visible data */}
         {studentDataList.slice(0, visiableCounter).map((value, index) => (
           <StudentListData
