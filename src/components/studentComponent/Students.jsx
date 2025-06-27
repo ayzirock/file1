@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import AddNewStudentPage from "./AddNewStudentPage";
 import StudentListData from "./StudentListData";
 import { LoopOutlined, SwapVertOutlined } from "@mui/icons-material";
@@ -20,7 +20,14 @@ const CustomTooltip = styled(({ className, ...props }) => (
 }));
 
 const Students = () => {
-  const { sidebarOpen } = useOutletContext();
+  const {
+    sidebarOpen,
+    visiableCounter,
+    setVisiableCounter,
+    keyValue,
+    studentDataList,
+    setStudentDataList,
+  } = useOutletContext();
 
   // Restrictions for feilds
   const [name, setName] = useState("");
@@ -48,7 +55,7 @@ const Students = () => {
   const [forEditBtn, setForEditBtn] = useState(false);
   const [forEditIndex, setForEditIndex] = useState(null);
 
-  const [rotating, setRotating] = useState(false)
+  const [rotating, setRotating] = useState(false);
 
   const handleAddStudentButton = () => {
     setImagePreview(null);
@@ -68,38 +75,38 @@ const Students = () => {
     setForEditBtn(false);
   };
 
-  const [visiableCounter, setVisiableCounter] = useState(7);
+  // const [visiableCounter, setVisiableCounter] = useState(7);
 
   const handleVisiableCounter = () => {
     setVisiableCounter(visiableCounter + 7);
   };
 
-   const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
   const handlingReloadBtn = () => {
-    setRotating(true)
+    setRotating(true);
     setStudentDataList(studentDataList);
     setVisiableCounter(7);
     if (scrollRef.current) {
       scrollRef.current.scrollTop = 0;
     }
     setTimeout(() => {
-    setRotating(false);
-  }, 800);
+      setRotating(false);
+    }, 800);
   };
 
   // const [studentDataList, setStudentDataList] = useState(dummyStudentData);
-  const keyValue = "storeStudentsData";
-  const [studentDataList, setStudentDataList] = useState(() => {
-    const studentDataStore = localStorage.getItem(keyValue);
-    if (!studentDataStore) {
-      localStorage.setItem(keyValue, JSON.stringify(dummyStudentData));
-      return dummyStudentData;
-    }
-    return JSON.parse(studentDataStore);
-    // if (!studentData) return [];
-    // return JSON.parse(studentData);
-  });
+  // const keyValue = "storeStudentsData";
+  // const [studentDataList, setStudentDataList] = useState(() => {
+  //   const studentDataStore = localStorage.getItem(keyValue);
+  //   if (!studentDataStore) {
+  //     localStorage.setItem(keyValue, JSON.stringify(dummyStudentData));
+  //     return dummyStudentData;
+  //   }
+  //   return JSON.parse(studentDataStore);
+  //   // if (!studentData) return [];
+  //   // return JSON.parse(studentData);
+  // });
 
   const handlingEditBtn = (editIndex) => {
     const edit = studentDataList[editIndex];
@@ -149,50 +156,52 @@ const Students = () => {
         {/* Line div */}
         <div className="mt-5 border-b-1 border-[#E5E5E5]"></div>
         {/* Table Header */}
-          <div
-            className={`w-full grid ${
-              sidebarOpen
-                ? "grid-cols-[100px_130px_180px_120px_155px_190px_150px]"
-                : "grid-cols-[120px_150px_200px_140px_175px_260px_150px]"
-            } items-center text-[12px] text-[#ACACAC] font-semibold mt-5`}
-          >
-            <div></div>
-            <div>Name</div>
-            <div>Email</div>
-            <div>Phone</div>
-            <div>Enroll Number</div>
-            <div>Date of admission</div>
-            <div className="flex justify-around items-center">
-              {/* Reload Tooltip icon */}
-              <CustomTooltip
-                title="Reload List"
-                placement="top"
-                arrow
-                PopperProps={{
-                  modifiers: [
-                    {
-                      name: "offset",
-                      options: {
-                        offset: [0, -5],
-                      },
+        <div
+          className={`grid ${
+            sidebarOpen
+              ? "grid-cols-[100px_130px_180px_120px_155px_190px_150px]"
+              : "grid-cols-[120px_150px_200px_140px_175px_260px_150px]"
+          } items-center justify-evenly text-[12px] text-[#ACACAC] font-semibold mt-5`}
+        >
+          <div></div>
+          <div>Name</div>
+          <div>Email</div>
+          <div>Phone</div>
+          <div>Enroll Number</div>
+          <div>Date of admission</div>
+          <div className="flex justify-around items-center">
+            {/* Reload Tooltip icon */}
+            <CustomTooltip
+              title="Reload List"
+              placement="top"
+              arrow
+              PopperProps={{
+                modifiers: [
+                  {
+                    name: "offset",
+                    options: {
+                      offset: [0, -5],
                     },
-                  ],
-                }}
+                  },
+                ],
+              }}
+            >
+              <div
+                className={`cursor-pointer text-[#FEAF00] ${
+                  rotating ? "animate-spin" : ""
+                }`}
+                onClick={handlingReloadBtn}
               >
-                <div
-                  className={`cursor-pointer text-[#FEAF00] ${rotating ? "animate-spin":""}`}
-                  onClick={handlingReloadBtn}
-                >
-                  <LoopOutlined />
-                </div>
-              </CustomTooltip>
-              {/* Counter */}
-              <div>
-                {Math.min(visiableCounter, studentDataList.length || 0)}/
-                {studentDataList.length || 0}
+                <LoopOutlined />
               </div>
+            </CustomTooltip>
+            {/* Counter */}
+            <div>
+              {Math.min(visiableCounter, studentDataList.length || 0)}/
+              {studentDataList.length || 0}
             </div>
           </div>
+        </div>
       </div>
 
       <div ref={scrollRef} className="px-5 overflow-auto h-[400px]">

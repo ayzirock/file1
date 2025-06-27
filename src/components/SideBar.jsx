@@ -36,7 +36,7 @@ const SideBar = ({ sidebarOpen }) => {
     <div
       className={`${
         sidebarOpen ? "w-[270px]" : "w-[85px]"
-      } min-h-screen bg-[#F2EAE1] hidden sm:block md:block transition-all duration-700 ease-in-out`}
+      } min-h-screen bg-[#F2EAE1] hidden sm:block md:block lg:block transition-all duration-700 ease-in-out`}
     >
       {/* logo div */}
       {sidebarOpen && (

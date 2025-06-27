@@ -50,13 +50,13 @@ const StudentListData = ({
   );
   return (
     <>
-      <div className=" h-[85px] font-normal text-[14px] my-3 rounded-lg bg-[#FFFFFF]">
+      <div className="h-[85px] font-normal text-[14px] my-3 rounded-lg bg-[#FFFFFF]">
         <div
-          className={`grid ${
+          className={`grid justify-evenly items-center ${
             sidebarOpen
               ? "grid-cols-[100px_130px_180px_120px_155px_190px_150px]"
               : "grid-cols-[120px_150px_200px_140px_175px_260px_150px]"
-          }  items-center`}
+          }`}
         >
           <div
             className={`w-15 h-20 flex items-center justify-center ${

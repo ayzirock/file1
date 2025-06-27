@@ -28,7 +28,7 @@ const PaymentDataList = ({
         index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F8F8F8]"
       }`}
     >
-      <div className={`grid ${
+      <div className={`grid justify-evenly ${
             sidebarOpen
               ? "grid-cols-[140px_180px_130px_140px_170px_220px_0px]"
               : "grid-cols-[170px_210px_170px_170px_200px_220px_0px] pl-10"

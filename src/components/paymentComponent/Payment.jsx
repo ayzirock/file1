@@ -1,13 +1,10 @@
 import { SwapVertOutlined } from "@mui/icons-material";
 import PaymentDataList from "./PaymentDataList";
 import dummyPaymentData from "./dummyPaymentData.json";
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext";
-// import { useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 const Payment = () => {
-  // const { sidebarOpen } = useOutletContext();
-  const sidebarOpen = useContext(UserContext);
+  const { sidebarOpen } = useOutletContext();
   return (
     <div
       className={`bg-[#F8F8F8] min-h-[calc(100vh-60px)] transition-all duration-700 `}
@@ -23,11 +20,11 @@ const Payment = () => {
         </div>
         <div className="mt-5 border-b-1 border-[#E5E5E5]"></div>
         <div
-          className={`grid ${
+          className={`w-full grid items-center justify-evenly ${
             sidebarOpen
               ? "grid-cols-[140px_180px_130px_140px_170px_220px_0px]"
               : "grid-cols-[170px_210px_170px_170px_200px_220px_0px] pl-10"
-          } items-center text-[12px] text-[#ACACAC] font-semibold mt-5`}
+          } text-[12px] text-[#ACACAC] font-semibold mt-5`}
         >
           <div className="pl-1">Name</div>
           <div>Payment Schedule</div>

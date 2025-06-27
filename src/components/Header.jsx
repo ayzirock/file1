@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   KeyboardArrowLeft,
   KeyboardArrowRight,
@@ -7,9 +7,10 @@ import {
 } from "@mui/icons-material";
 
 const Header = ({ sidebarOpen, toggleSidebar }) => {
+
   return (
     <div
-      className={`justify-between h-[60px] flex items-center bg-[#FFFFFF] sticky top-0`}
+      className={`justify-between h-[60px] items-center hidden sm:flex md:flex lg:flex bg-[#FFFFFF] sticky top-0`}
     >
       {/* Toggle button */}
       <div
@@ -41,3 +42,7 @@ const Header = ({ sidebarOpen, toggleSidebar }) => {
 };
 
 export default Header;
+
+
+
+
