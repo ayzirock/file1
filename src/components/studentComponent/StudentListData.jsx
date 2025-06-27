@@ -39,7 +39,7 @@ const StudentListData = ({
             onClick={() => {
               deleteFunction();
               setShowConfirmBox(false);
-              toast.success("Delete Successfully");
+              toast.success("Delete Successfully"); 
             }}
           >
             Yes

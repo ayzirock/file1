@@ -22,15 +22,15 @@ const Header = ({ sidebarOpen, toggleSidebar }) => {
       <div className="flex items-center">
         <div className="pr-6">
           <input
-            className="w-[212px] h-[37px] pl-[14px] pr-[34px] rounded-lg border border-[#E5E5E5]"
+            className={`w-[212px] h-[37px] pl-[14px] pr-[34px] rounded-lg border border-[#E5E5E5] placeholder:<SearchOutlined />`}
             type="search"
             name="searchBox"
             id="searchBox"
             placeholder="Search..."
           />
-          <span className="text-[#E5E5E5] relative right-[30px]">
+          {/* <span className="text-[#E5E5E5] relative right-[30px]">
             <SearchOutlined />
-          </span>
+          </span> */}
         </div>
         <div className="text-[#E5E5E5] mr-12 cursor-pointer">
           <NotificationsNoneOutlined />

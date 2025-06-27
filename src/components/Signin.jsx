@@ -57,12 +57,11 @@ function Signin() {
   return (
     <div className="min-h-screen max-w-screen bg-gradient-to-r from-[#FEAF00] to-[#F8D442] flex justify-center items-center">
       {/* Login-box div */}
-      <div className="w-[420px] h-[495px] bg-[#FFFFFF] rounded-[20px] p-5">
+      <div className="w-[340px] h-[415px] sm:w-[420px] sm:h-[495px] md:w-[440px] md:h-[515px] bg-[#FFFFFF] rounded-[20px] p-5">
         <form onSubmit={submitForm}>
           {/* Logo div */}
-          <div className="w-[342px] h-auto mx-auto mb-8">
+          <div className="max-w-[342px] mx-auto mb-2 :mb-8 md:mb-8">
             <svg
-              className="w-full h-auto"
               viewBox="0 0 346 39"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -75,45 +74,45 @@ function Signin() {
             </svg>
           </div>
           {/* Text div */}
-          <div className="text-center mx-auto my-6">
-            <div className="uppercase font-semibold text-[22px] mb-2">
+          <div className="text-center mx-auto my-3 sm:my-6 md:my-6">
+            <div className="uppercase font-semibold text-[19px] sm:text-[22px] md:text-[22px] mb-2">
               sign in
             </div>
-            <div className="font-normal text-sm text-[#6C6C6C]">
+            <div className="font-normal text-xs sm:text-sm md:text-sm text-[#6C6C6C]">
               Enter your credentials to access your account
             </div>
           </div>
           {/* Email div */}
-          <div className="mb-1">
-            <label htmlFor="email" className="text-sm font-normal">
+          <div className="mb-2">
+            <label htmlFor="email" className="text-xs sm:text-sm md:text-sm font-normal">
               Email
             </label>
             <input
               type="text"
-              className={`py-2 px-3 mt-1 lowercase w-full h-10 border rounded  ${
+              className={`py-2 px-3 mt-1 w-full h-8 sm:h-10 md-h-10 border rounded  ${
                 emailError ? "border-red-500 text-red-500" : "border-[#e5e5e5]"
               }`}
               id={`email`}
               name="email"
-              placeholder="Enter your email"
+              placeholder="Enter your email address"
               value={email}
               autoFocus
               onChange={handleEmailChange}
             />
             <div className="h-4 my-1">
               {emailError && (
-                <p className="text-red-500 text-sm">Invalid email address.</p>
+                <p className="text-red-500 text-xs sm:text-sm md:text-sm ">Invalid email address.</p>
               )}
             </div>
           </div>
           {/* Password div */}
           <div className="mb-6">
-            <label htmlFor="password" className="text-sm font-normal">
+            <label htmlFor="password" className="text-xs sm:text-sm md:text-sm font-normal">
               Password
             </label>
             <input
               type="password"
-              className={`py-2 px-3 mt-1 w-full h-10 border rounded ${
+              className={`py-2 px-3 mt-1 w-full h-8 sm:h-10 md-h-10 border rounded ${
                 passwordError
                   ? "border-red-500 text-red-500"
                   : "border-[#e5e5e5]"
@@ -126,23 +125,23 @@ function Signin() {
             />
             <div className="h-4 my-1">
               {passwordError && (
-                <p className="text-red-500 text-sm">
+                <p className="text-red-500 text-xs sm:text-sm md:text-sm ">
                   Password must be 8 characters.
                 </p>
               )}
             </div>
           </div>
           {/* signin button */}
-          <div className="mt-7">
+          <div className="mt-4 sm:mt-7 md:mt-8">
             <button
               type="submit"
-              className="uppercase w-full h-10 flex justify-center items-center cursor-pointer bg-[#feaf00] text-[#FFFFFF] border-none outline-none rounded"
+              className="uppercase w-full h-8 sm:h-10 md-h-10 text-xs sm:text-lg md:text-lg cursor-pointer bg-[#feaf00] text-[#FFFFFF] border-none outline-none rounded"
             >
               Sign in
             </button>
           </div>
           {/* forget link */}
-          <div className="text-center text-[#6c6c6c] mt-6 font-semibold text-sm">
+          <div className="text-center text-[#6c6c6c] mt-5 sm:mt-6 md:mt-7 font-semibold text-xs sm:text-sm md:text-sm ">
             <p>
               Forgot your password?
               <span className="ml-1 cursor-pointer underline text-[#Feaf00]">

@@ -36,7 +36,7 @@ const SideBar = ({ sidebarOpen }) => {
     <div
       className={`${
         sidebarOpen ? "w-[270px]" : "w-[85px]"
-      } min-h-screen bg-[#F2EAE1] transition-all duration-700 ease-in-out`}
+      } min-h-screen bg-[#F2EAE1] hidden sm:block md:block transition-all duration-700 ease-in-out`}
     >
       {/* logo div */}
       {sidebarOpen && (
@@ -60,7 +60,7 @@ const SideBar = ({ sidebarOpen }) => {
         <img
           src={profile}
           className={`${
-            sidebarOpen ? "w-[115px] h-[115px] mt-7" : "w-12 h-12 mt-19"
+            sidebarOpen ? "w-[115px] h-[115px] mt-7" : "w-12 h-12 mt-10"
           } rounded-full object-cover object-[100%_22%] mx-auto`}
         />
       </div>
@@ -81,7 +81,7 @@ const SideBar = ({ sidebarOpen }) => {
       )}
       {/* Nav items Div*/}
       <nav>
-        <ul className={`${sidebarOpen ? "mt-6" : "mt-10"}`}>
+        <ul className={`${sidebarOpen ? "mt-6" : "mt-19"}`}>
           {navbarItems.map((item, index) => (
             <li key={index}>
               <NavLink to={item.path} onClick={() => handleClickFun(item.path)}>
