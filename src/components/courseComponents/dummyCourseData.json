@@ -1,0 +1,74 @@
+[
+  {
+    "image": "/image/courseImage1.jpg",
+    "status": "Coming Soon",
+    "title": "Mobile App Development",
+    "description": "Master advanced React concepts including hooks,context.",
+    "studentCount": 20,
+    "Schedule": 4,
+    "contacts": 33,
+    "rating": 4.2,
+    "price": 299,
+    "teacherName": "Mike Chen"
+  },
+  {
+    "image": "/image/courseImage2.jpg",
+    "status": "Active",
+    "title": "Advanced React Development",
+    "description": "Build cross-platform mobile applications using React Native and Flutter.",
+    "studentCount": 20,
+    "Schedule": 4,
+    "contacts": 33,
+    "rating": 4.2,
+    "price": 299,
+    "teacherName": "Emily Davis"
+  },
+  {
+    "image": "/image/courseImage1.jpg",
+    "status": "Draft",
+    "title": "UI/UX Design Fundamentals",
+    "description": "Learn the principles of user interface and user experience design from scratch.",
+    "studentCount": 66,
+    "Schedule": 7,
+    "contacts": 33,
+    "rating": 4.1,
+    "price": 153,
+    "teacherName": "Sarah Johnson"
+  },
+  {
+    "image": "/image/courseImage2.jpg",
+    "status": "Active",
+    "title": "Data Science with Python",
+    "description": "Comprehensive course covering data analysis, machine learning, and visualization.",
+    "studentCount": 121,
+    "Schedule": 9,
+    "contacts": 23,
+    "rating": 4.7,
+    "price": 299,
+    "teacherName": "Emily Davis"
+  },
+  {
+    "image": "/image/courseImage1.jpg",
+    "status": "Coming Soon",
+    "title": "Digital Marketing Strategy",
+    "description": "Build cross-platform mobile applications using React Native and Flutter.",
+    "studentCount": 134,
+    "Schedule": 3,
+    "contacts": 73,
+    "rating": 4.7,
+    "price": 349,
+    "teacherName": "Alex Rodriguez"
+  },
+  {
+    "image": "/image/courseImage2.jpg",
+    "status": "Active",
+    "title": "Cybersecurity Essentials",
+    "description": "Essential cybersecurity concepts and practices for modern organizations.",
+    "studentCount": 88,
+    "Schedule": 6,
+    "contacts": 24,
+    "rating": 4.8,
+    "price": 179,
+    "teacherName": "David Wilson"
+  }
+]

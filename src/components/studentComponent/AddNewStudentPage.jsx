@@ -271,7 +271,7 @@ const AddNewStudentPage = ({
       {/* Student Info Form Div */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`bg-[#FFFFFF] w-150 h-150 rounded-l-lg overflow-y-auto p-6 fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
+        className={`bg-[#FFFFFF] w-[600px] h-[600px] rounded-l-lg overflow-y-auto p-6 fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
           forStudentInfo ? "opacity-100" : "opacity-0"
         }`}
       >

@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
 import SideBar from "./SideBar";
+import dummyStudentData from "../components/studentComponent/dummyStudentData.json"
+import dummyCourseData from "./courseComponents/dummyCourseData.json";
 
 const Dashboard = () => {
+  
+  const dummyCourseCount = dummyCourseData.length;
+
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [visiableCounter, setVisiableCounter] = useState(7);
   const keyValue = "storeStudentsData";
@@ -37,6 +42,7 @@ const Dashboard = () => {
             keyValue,
             studentDataList,
             setStudentDataList,
+            dummyCourseCount,
           }}
         />
       </div>

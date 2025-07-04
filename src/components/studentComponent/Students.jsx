@@ -134,7 +134,7 @@ const Students = () => {
 
   return (
     <div className="bg-[#F8F8F8] min-h-[calc(100vh-60px)] transition-all duration-700 ease-in-out">
-      <div className=" p-5 sticky top-15">
+      <div className="m-5 sticky top-15 z-50">
         <div className="flex justify-between items-center">
           <div className="font-bold text-[22px]">
             <h1>Students List</h1>
@@ -146,7 +146,7 @@ const Students = () => {
             <div>
               <button
                 onClick={handleAddStudentButton}
-                className="w-[199px] h-11 bg-[#FEAF00] text-[#FFFFFF] rounded-sm cursor-pointer"
+                className="w-[199px] h-11 bg-[#FEAF00] text-[#FFFFFF] rounded-md cursor-pointer"
               >
                 ADD NEW STUDENT
               </button>
@@ -157,14 +157,14 @@ const Students = () => {
         <div className="mt-5 border-b-1 border-[#E5E5E5]"></div>
         {/* Table Header */}
         <div
-          className={`grid ${
+          className={`grid mr-[14px] ${
             sidebarOpen
-              ? "grid-cols-[100px_130px_180px_120px_155px_190px_150px]"
-              : "grid-cols-[120px_150px_200px_140px_175px_260px_150px]"
-          } items-center justify-evenly text-[12px] text-[#ACACAC] font-semibold mt-5`}
+              ? "grid-cols-[1fr_1.3fr_1.8fr_1.2fr_1.55fr_1.9fr_1.5fr]"
+              : "grid-cols-[1.2fr_1.5fr_2.0fr_1.4fr_1.75fr_2.6fr_1.5fr]"
+          } items-center gap-1 text-[12px] text-[#ACACAC] font-semibold mt-5`}
         >
           <div></div>
-          <div>Name</div>
+          <div >Name</div>
           <div>Email</div>
           <div>Phone</div>
           <div>Enroll Number</div>
@@ -204,7 +204,7 @@ const Students = () => {
         </div>
       </div>
 
-      <div ref={scrollRef} className="px-5 overflow-auto h-[400px]">
+      <div ref={scrollRef} className="px-5 overflow-auto h-[431px]">
         {/* show visible data */}
         {studentDataList.slice(0, visiableCounter).map((value, index) => (
           <StudentListData
@@ -226,10 +226,10 @@ const Students = () => {
         ))}
 
         {visiableCounter < studentDataList.length && (
-          <div className="text-center mt-4">
+          <div className="text-center my-4">
             <button
               onClick={handleVisiableCounter}
-              className="bg-[#FEAF00] text-[#FFFFFF] cursor-pointer px-4 py-3 mt-2 rounded"
+              className="bg-[#FEAF00] text-[#FFFFFF] cursor-pointer px-4 py-3 border rounded"
             >
               Load More
             </button>

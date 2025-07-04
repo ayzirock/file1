@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Students from "./components/studentComponent/Students";
-import Course from "./components/Course";
+import Course from "./components/courseComponents/Course";
 import Payment from "./components/paymentComponent/Payment";
 import Report from "./components/Report";
 import Settings from "./components/Settings";

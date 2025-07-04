@@ -12,7 +12,7 @@ const StudentListData = ({
   editFunction,
   deleteFunction,
   sidebarOpen,
-  defaultImage
+  defaultImage,
 }) => {
   const [showConfirmBox, setShowConfirmBox] = useState(false);
 
@@ -39,7 +39,7 @@ const StudentListData = ({
             onClick={() => {
               deleteFunction();
               setShowConfirmBox(false);
-              toast.success("Delete Successfully"); 
+              toast.success("Delete Successfully");
             }}
           >
             Yes
@@ -52,10 +52,10 @@ const StudentListData = ({
     <>
       <div className="h-[85px] font-normal text-[14px] my-3 rounded-lg bg-[#FFFFFF]">
         <div
-          className={`grid justify-evenly items-center ${
+          className={`grid gap-1 items-center ${
             sidebarOpen
-              ? "grid-cols-[100px_130px_180px_120px_155px_190px_150px]"
-              : "grid-cols-[120px_150px_200px_140px_175px_260px_150px]"
+              ? "grid-cols-[1fr_1.30fr_1.80fr_1.20fr_1.55fr_1.90fr_1.50fr]"
+              : "grid-cols-[1.2fr_1.5fr_2.0fr_1.4fr_1.75fr_2.6fr_1.5fr]"
           }`}
         >
           <div
@@ -68,12 +68,12 @@ const StudentListData = ({
               src={image || defaultImage}
             />
           </div>
-          <div className="capitalize">{name}</div>
-          <div className="lowercase max-w-34 truncate">{email}</div>
+          <div className="capitalize truncate">{name}</div>
+          <div className="lowercase truncate">{email}</div>
           <div>{phone}</div>
           <div>{enrollNum}</div>
           <div>{date}</div>
-          <div className="w-[150px] flex justify-around items-center">
+          <div className="flex justify-around items-center">
             <div
               className="cursor-pointer text-[#FEAF00]"
               onClick={() => editFunction()}

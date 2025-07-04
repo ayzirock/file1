@@ -28,11 +28,7 @@ const PaymentDataList = ({
         index % 2 === 0 ? "bg-[#FFFFFF]" : "bg-[#F8F8F8]"
       }`}
     >
-      <div className={`grid justify-evenly ${
-            sidebarOpen
-              ? "grid-cols-[140px_180px_130px_140px_170px_220px_0px]"
-              : "grid-cols-[170px_210px_170px_170px_200px_220px_0px] pl-10"
-          } items-center font-normal text-[14px]`} >
+      <div className={`grid gap-1 w-full grid-cols-[1fr_1.5fr_1.4fr_1.4fr_1.5fr_1.4fr_1.6fr] items-center font-normal text-[14px]`} >
         <div className="pl-1">
           {hideInfo[index] ? (
             <div className="font-semibold text-[16px]">•••••••</div>
@@ -77,7 +73,7 @@ const PaymentDataList = ({
         </div>
         <div
           onClick={() => toggleData(index)}
-          className="text-[#FEAF00] cursor-pointer"
+          className="text-[#FEAF00] cursor-pointer text-center"
         >
           {!visibleBtn ? <VisibilityOutlined /> : <VisibilityOffOutlined />}
         </div>

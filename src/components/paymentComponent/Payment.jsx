@@ -20,11 +20,7 @@ const Payment = () => {
         </div>
         <div className="mt-5 border-b-1 border-[#E5E5E5]"></div>
         <div
-          className={`w-full grid items-center justify-evenly ${
-            sidebarOpen
-              ? "grid-cols-[140px_180px_130px_140px_170px_220px_0px]"
-              : "grid-cols-[170px_210px_170px_170px_200px_220px_0px] pl-10"
-          } text-[12px] text-[#ACACAC] font-semibold mt-5`}
+          className={`grid gap-1 grid-cols-[1fr_1.5fr_1.4fr_1.4fr_1.5fr_1.4fr_1.6fr] items-center text-[12px] text-[#ACACAC] font-semibold mt-5`}
         >
           <div className="pl-1">Name</div>
           <div>Payment Schedule</div>
@@ -32,6 +28,7 @@ const Payment = () => {
           <div>Amount Paid</div>
           <div>Balance amount</div>
           <div>Date</div>
+          <div></div>
         </div>
       </div>
       <div className=" overflow-y-auto p-5 h-[449px]">

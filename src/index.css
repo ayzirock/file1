@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-range {
+  background-color: #f8f8f8;
+  accent-color: #feaf00;
+  outline: none;
+  border: none;
 }
