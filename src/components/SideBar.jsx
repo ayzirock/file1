@@ -61,22 +61,22 @@ const SideBar = ({ sidebarOpen }) => {
           src={profile}
           className={`${
             sidebarOpen ? "w-[115px] h-[115px] mt-7" : "w-12 h-12 mt-10"
-          } rounded-full object-cover object-[100%_22%] mx-auto`}
+          } rounded-full object-cover object-[100%_22%] mx-auto transition-all duration-300 ease-in-out`}
         />
       </div>
       {/* Name & Rank Display div */}
       {sidebarOpen && (
-        <div className="mt-5">
-          <div
+        <div className="mt-6">
+          <h2
             className={`${
               sidebarOpen ? "w-full" : "w-30"
-            } h-7 font-bold text-[17px] text-center truncate`}
+            } h-7 font-bold text-[17px] text-center truncate pb-7`}
           >
-            <h1>Karthi Madesh</h1>
-          </div>
-          <div className="w-full h-7 text-center font-bold text-[#FEAF00] truncate">
-            <div>Admin</div>
-          </div>
+            Karthi Madesh
+          </h2>
+          <h6 className="w-full h-7 text-center font-bold text-[#FEAF00] truncate">
+            Admin
+          </h6>
         </div>
       )}
       {/* Nav items Div*/}
@@ -93,9 +93,9 @@ const SideBar = ({ sidebarOpen }) => {
                   }
                     ${
                       activeLink === item.path
-                        ? "bg-[#FEAF00]"
+                        ? "bg-[#FEAF00] text-white"
                         : "hover:bg-[#FEAF00]"
-                    }   flex items-center cursor-pointer mb-1 mx-auto `}
+                    }   flex items-center cursor-pointer mb-1 mx-auto transition-all duration-300 ease-in-out`}
                 >
                   <div className="w-6"> {item.icon}</div>
                   {sidebarOpen && <div className="pl-5">{item.label}</div>}
@@ -130,9 +130,6 @@ const SideBar = ({ sidebarOpen }) => {
 };
 
 export default SideBar;
-
-
-
 
 // Example
 

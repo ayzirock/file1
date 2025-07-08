@@ -7,7 +7,7 @@ import Payment from "./components/paymentComponent/Payment";
 import Report from "./components/Report";
 import Settings from "./components/Settings";
 import Signin from "./components/Signin";
-import Home from "./components/Home"; // You'll need to create this
+import Home from "./components/Home";
 
 function App() {
   return (

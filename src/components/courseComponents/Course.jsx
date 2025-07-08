@@ -23,7 +23,10 @@ const Course = () => {
     (c) => c.status.toLowerCase() === "active"
   ).length;
 
-  const totalStudents = dummyCourseData.reduce((sum, c) => sum + c.studentCount, 0);
+  const totalStudents = dummyCourseData.reduce(
+    (sum, c) => sum + c.studentCount,
+    0
+  );
 
   const ratingCollect = dummyCourseData.reduce((sum, c) => sum + c.rating, 0);
   const averageRating = ratingCollect / dummyCourseData.length;
@@ -52,15 +55,15 @@ const Course = () => {
           </button>
         </div>
       </div>
-      <div className="overflow-y-auto h-[29rem]">
+      <div className="overflow-y-auto max-h-[calc(100vh-176px)]">
         {/* Small_Boxes */}
         <div className="flex justify-between items-center mx-5 gap-5">
           <SmallBoxes
             iconC={<ImportContactsOutlined fontSize="large" />}
             nameC="Total Courses"
             countC={dummyCourseData.length}
-            textColorC="text-[orange]"
-            bgColorC="bg-[#fff0bb]"
+            textColorC="text-[#e72525]"
+            bgColorC="bg-[#ffd6d6]"
           />
           <SmallBoxes
             iconC={<ImportContactsOutlined fontSize="large" />}
@@ -86,8 +89,7 @@ const Course = () => {
         </div>
         {/* 3 filter div */}
         <div className="my-8 flex items-center mx-5 gap-5">
-          <div className="outline outline-[#c2c2c2] cursor-pointer hover:outline-[#868686] bg-white font-medium rounded-lg inline-block px-3">
-            {/* <label for="categories">All Categories</label> */}
+          <div className="outline outline-[#c2c2c2] cursor-pointer hover:outline-2 hover:outline-[#868686] bg-white font-medium rounded-lg inline-block px-3">
             <select
               id="categories"
               className="pr-11 py-3.5 outline-none border-none cursor-pointer"
@@ -97,23 +99,38 @@ const Course = () => {
               <option value="categorie2">cat 2</option>
             </select>
           </div>
-          <div className="outline outline-[#c2c2c2] cursor-pointer hover:outline-[#868686] bg-white font-medium rounded-lg inline-block px-3">
+          <div className="outline-2 outline-[#c2c2c2] cursor-pointer hover:outline-2 hover:outline-[#868686] bg-white font-medium rounded-lg px-3">
             <select
               id="status"
               className="pr-11 py-3.5 outline-none border-none cursor-pointer"
               onChange={(e) => setStatusCheck(e.target.value)}
             >
-              <option value="allstatus">All Status</option>
-              <option value="active">Active</option>
-              <option value="comingsoon">Coming Soon</option>
-              <option value="draft">Draft</option>
+              <option
+                value="allstatus"
+                className="hover:bg-[red] hover:text-white"
+              >
+                All Status
+              </option>
+              <option
+                value="active"
+                className="hover:bg-[red] hover:text-white"
+              >
+                Active
+              </option>
+              <option
+                value="comingsoon"
+                className="hover:bg-[red] hover:text-white"
+              >
+                Coming Soon
+              </option>
+              <option value="draft" className="hover:bg-[red] hover:text-white">
+                Draft
+              </option>
             </select>
           </div>
-          <div className="outline outline-[#c2c2c2] hover:outline-[#868686] bg-white font-medium rounded-lg inline-block px-3">
-            <span className="pr-3.5">
-              <FilterAltOutlined />
-            </span>
-            <button id="status" className="py-2.5 outline-none border-none">
+          <div className="outline outline-[#c2c2c2] hover:outline-2 hover:outline-[#868686] bg-white font-medium rounded-lg px-3">
+            <FilterAltOutlined fontSize="large" className="pr-3.5" />
+            <button id="status" className="py-2.5">
               More Filters
             </button>
           </div>

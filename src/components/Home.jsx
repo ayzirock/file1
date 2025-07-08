@@ -29,7 +29,7 @@ const Home = () => {
       <Box
         icon={<Svg4 />}
         name="Users"
-        count={3}
+        count={studentDataList.length || 0}
         bgColor=" bg-gradient-to-r from-[#FEAF00] to-[#F8D442]"
       />
     </div>
@@ -38,17 +38,15 @@ const Home = () => {
 
 export default Home;
 
-const Box = ({ icon, name, count, bgColor}) => {
+const Box = ({ icon, name, count, bgColor }) => {
   const { sidebarOpen } = useOutletContext();
   return (
     <div
-      className={`rounded-lg m-5 p-5 transition-all h-[187px] ease-in-out duration-700 flex-1 ${bgColor}`}
+      className={`rounded-lg m-5 p-5 transition-all h-[197px] ease-in-out duration-700 flex-1 ${bgColor}`}
     >
-      <div className="text-[48px] text-[#74C1ED] py-2">{icon}</div>
-      <div className="text-[14px] py-2 font-normal text-[#6C6C6C]">{name}</div>
-      <div className=" flex justify-end font-bold text-[25.5px] pt-5">
-        {count}
-      </div>
+      <div className="text-5xl text-[#74C1ED] py-2">{icon}</div>
+      <div className="text-sm py-2 font-normal text-[#6C6C6C]">{name}</div>
+      <div className="text-end font-bold text-[25.5px] pt-8">{count}</div>
     </div>
   );
 };

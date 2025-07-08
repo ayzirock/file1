@@ -31,7 +31,7 @@ const Payment = () => {
           <div></div>
         </div>
       </div>
-      <div className=" overflow-y-auto p-5 h-[449px]">
+      <div className=" overflow-y-auto p-5 max-h-[calc(100vh-212px)]">
         {dummyPaymentData.map((value, index) => (
           <PaymentDataList
             key={index}

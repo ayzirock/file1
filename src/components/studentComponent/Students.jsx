@@ -204,7 +204,7 @@ const Students = () => {
         </div>
       </div>
 
-      <div ref={scrollRef} className="px-5 overflow-auto h-[431px]">
+      <div ref={scrollRef} className="px-5 overflow-auto max-h-[calc(100vh-212px)]">
         {/* show visible data */}
         {studentDataList.slice(0, visiableCounter).map((value, index) => (
           <StudentListData

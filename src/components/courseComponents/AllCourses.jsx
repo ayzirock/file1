@@ -25,7 +25,7 @@ const AllCourses = ({
 
   return (
     <div
-      className={`bg-white rounded-xl w-full sm:w-[32%] md:w-[32%] lg:w-[32%]`}
+      className={`bg-white rounded-xl w-full sm:w-[32%] md:w-[32%] lg:w-[32%] xl:w-[32%] 2xl:w-[32%]`}
     >
       {/* courseImage div */}
       <div className="relative">
@@ -49,7 +49,7 @@ const AllCourses = ({
           <MoreVert className="cursor-pointer" />
         </div>
         {/* description */}
-        <p className={`text-sm ${textColor} whitespace-rap break-all mb-4 leading-5 text-wrap truncate h-10.5`}>
+        <p className={`text-sm ${textColor} break-all mb-4 leading-5 text-wrap truncate h-10.5`}>
           {description}
         </p>
         {/* Information */}
