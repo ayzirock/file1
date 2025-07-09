@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "./Header";
+import Header from "../header/Header";
 import { Outlet } from "react-router-dom";
-import SideBar from "./SideBar";
-import dummyStudentData from "../components/studentComponent/dummyStudentData.json"
-import dummyCourseData from "./courseComponents/dummyCourseData.json";
+import SideBar from "../sidebar/SideBar";
+import dummyStudentData from "../students/dummyStudentData.json"
+import dummyCourseData from "../course/dummyCourseData.json";
 
 const Dashboard = () => {
   

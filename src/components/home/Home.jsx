@@ -1,5 +1,5 @@
 import React from "react";
-import { Svg1, Svg2, Svg3, Svg4 } from "./SVGs";
+import { Svg1, Svg2, Svg3, Svg4 } from "../SVGs";
 import { useOutletContext } from "react-router-dom";
 
 const Home = () => {

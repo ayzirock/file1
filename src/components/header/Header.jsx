@@ -5,7 +5,7 @@ import {
   NotificationsNoneOutlined,
   SearchOutlined,
 } from "@mui/icons-material";
-import SearchBox from "./SearchBox/SearchBox";
+import SearchBox from "../SearchBox/SearchBox";
 
 const Header = ({ sidebarOpen, toggleSidebar }) => {
   return (

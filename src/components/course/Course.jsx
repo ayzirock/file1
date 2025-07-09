@@ -99,7 +99,10 @@ const Course = () => {
               <option value="categorie2">cat 2</option>
             </select>
           </div>
-          <div className="outline-2 outline-[#c2c2c2] cursor-pointer hover:outline-2 hover:outline-[#868686] bg-white font-medium rounded-lg px-3">
+          <div 
+          className="appearance-none outline-1 outline-[#c2c2c2] cursor-pointer hover:outline-2 hover:outline-[#868686] bg-white font-medium rounded-lg px-3"
+          // className="appearance-none bg-white text-gray-800 border border-gray-300 px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
             <select
               id="status"
               className="pr-11 py-3.5 outline-none border-none cursor-pointer"
